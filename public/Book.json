@@ -8,7 +8,7 @@
         "totalPages": 328,
         "rating": 4.5,
         "category": "Fiction",
-        "tags": ["Dystopian", "Political", "Classic"],
+        "tags": ["Dystopian", "Political"],
         "publisher": "Penguin Books",
         "yearOfPublishing": 1949
     },
@@ -21,7 +21,7 @@
         "totalPages": 180,
         "rating": 4.8,
         "category": "Fiction",
-        "tags": ["Romance", "Classic", "American Literature"],
+        "tags": ["Romance", "Classic"],
         "publisher": "Scribner",
         "yearOfPublishing": 1925
     },
@@ -34,7 +34,7 @@
         "totalPages": 324,
         "rating": 4.7,
         "category": "Fiction",
-        "tags": ["Coming of Age", "Social Issues", "Classic"],
+        "tags": ["Coming of Age", "Social Issues"],
         "publisher": "J. B. Lippincott & Co.",
         "yearOfPublishing": 1960
     },
@@ -47,7 +47,7 @@
         "totalPages": 224,
         "rating": 4.4,
         "category": "Fiction",
-        "tags": ["Coming of Age", "American Literature", "Classic"],
+        "tags": ["Coming of Age", "American Literature"],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 1951
     },
@@ -60,7 +60,7 @@
         "totalPages": 310,
         "rating": 4.9,
         "category": "Fantasy",
-        "tags": ["Adventure", "Quest", "Classic"],
+        "tags": ["Adventure", "Quest"],
         "publisher": "George Allen & Unwin",
         "yearOfPublishing": 1937
     },
@@ -73,7 +73,7 @@
         "totalPages": 279,
         "rating": 4.6,
         "category": "Fiction",
-        "tags": ["Romance", "Classic", "British Literature"],
+        "tags": ["Romance", "Classic"],
         "publisher": "T. Egerton, Whitehall",
         "yearOfPublishing": 1813
     }

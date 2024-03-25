@@ -26,9 +26,9 @@ useEffect( () =>{
         </div>
        
 
-       <div>
+       <div className="container mx-auto  grid grid-cols-1 lg:grid-cols-3 gap-5">
        {
-            cards.map(job => <Job key={job.id} job={job}></Job>)
+            cards.map(job => <Job key={job.bookId} job={job}></Job>)
         }
 
        </div>
