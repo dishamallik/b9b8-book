@@ -1,0 +1,80 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/HxgT9QV/img1.jpg",
+        "review": "A chilling portrayal of a dystopian society where freedom is restricted and truth is manipulated. Orwell's prophetic vision remains hauntingly relevant today.",
+        "totalPages": 328,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": ["Dystopian", "Political", "Classic"],
+        "publisher": "Penguin Books",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 2,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/TmYmpyV/img3.jpg",
+        "review": "A mesmerizing tale of love, wealth, and the American Dream, set against the backdrop of the roaring twenties. Fitzgerald's prose is elegant and captivating.",
+        "totalPages": 180,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": ["Romance", "Classic", "American Literature"],
+        "publisher": "Scribner",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 3,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/bWNHXsN/img4.jpg",
+        "review": "A poignant exploration of racial injustice and moral growth, seen through the innocent eyes of a young girl in the American South. Lee's masterpiece remains timeless.",
+        "totalPages": 324,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": ["Coming of Age", "Social Issues", "Classic"],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/Mp05bZC/img5.jpg",
+        "review": "A raw and honest portrayal of teenage angst and alienation. Holden Caulfield's journey through New York City is both heartbreaking and enlightening.",
+        "totalPages": 224,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": ["Coming of Age", "American Literature", "Classic"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 5,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/2gNQNPc/img6.jpg",
+        "review": "An enchanting adventure set in Middle-earth, where Bilbo Baggins embarks on a journey to reclaim treasure guarded by the dragon Smaug. Tolkien's world-building is unparalleled.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["Adventure", "Quest", "Classic"],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    },
+    {
+        "bookId": 6,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/0BdZbg0/img7.jpg",
+        "review": "A witty and romantic comedy of manners, focusing on the tumultuous relationship between Elizabeth Bennet and Mr. Darcy. Austen's sharp social commentary is a delight.",
+        "totalPages": 279,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Romance", "Classic", "British Literature"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    }
+]
