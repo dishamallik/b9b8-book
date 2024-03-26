@@ -4,11 +4,11 @@ const Header = () => {
     const links = 
     <>
 
-<li><NavLink to="/home">Home</NavLink></li>
-<li><NavLink to="/listed">Listed Books</NavLink></li>
-<li><NavLink to="/pages">Pages to Read</NavLink></li>
-<li><NavLink to="/Ebooks">Ebooks</NavLink></li>
-<li><NavLink to="/buy">Buy on Amazon</NavLink></li>
+<li><NavLink to="/home" className={({isActive}) => isActive? 'border-2  bg-green-100 text-green-500' : '' }>Home</NavLink></li>
+<li><NavLink to="/listed" className={({isActive}) => isActive? 'border-2 bg-green-100  text-green-500' : '' }>Listed Books</NavLink></li>
+<li><NavLink to="/pages" className={({isActive}) => isActive? 'border-2 bg-green-100  text-green-500' : '' }>Pages to Read</NavLink></li>
+<li><NavLink to="/Ebooks"  className={({isActive}) => isActive? 'border-2 bg-green-100  text-green-500' : '' }>Ebooks</NavLink></li>
+<li><NavLink to="/buy" className={({isActive}) => isActive? 'border-2 bg-green-100  text-green-500' : '' }>Buy on Amazon</NavLink></li>
        
         
 

@@ -14,6 +14,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 
 import Ebook from './components/Ebook/Ebook';
+import BookDetails from './components/BookDetails/BookDetails';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         
         
         
+      },
+      {
+        path: '/job/:bookId',
+        element: <BookDetails></BookDetails>,
+        loader: () => fetch('../Book.json')
       }
     ]
   },
