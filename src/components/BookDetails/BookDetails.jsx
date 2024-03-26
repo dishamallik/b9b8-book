@@ -1,16 +1,47 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
+import  { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../utility/localstorage";
 
 
 const BookDetails = () => {
     const jobs = useLoaderData();
-
-    
-
     const {bookId} = useParams();
     const bookIdInt = parseInt(bookId);
     const job = jobs.find(job => job.bookId === bookIdInt);
     console.log(job);
+
+// toast for read
+
+
+
+
+const [firstButtonClickCount, setFirstButtonClickCount] = useState(0);
+  const [secondButtonClickCount, setSecondButtonClickCount] = useState(0);
+    
+  const handleFirstButtonClick = () => {
+    saveJobApplication(bookIdInt);
+    if (firstButtonClickCount === 0) {
+      toast.success('Success toast', { autoClose: 2000 });
+     
+    } 
+    else {
+      toast.error('Error toast', { autoClose: 2000 });
+    }
+    setFirstButtonClickCount(firstButtonClickCount + 1);
+  };
+
+  const handleSecondButtonClick = () => {
+    toast.error('Error toast', { autoClose: 2000 });
+    setSecondButtonClickCount(secondButtonClickCount + 1);
+  };   
+      
+
+
+
+
     return (
       <div className="container mx-auto gap-6 mt-10 lg:flex">
         <div>
@@ -52,13 +83,15 @@ const BookDetails = () => {
             
         </div>
         <div className="flex gap-10">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Read</button>
-            <button className="bg-green-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400">Wishlist</button>
+            <button onClick={handleFirstButtonClick}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Read</button>
+            <button onClick={handleSecondButtonClick} className="bg-green-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400">Wishlist</button>
         </div>
     </div>
 </div>
              
         </div>
+        <ToastContainer />
+        
       </div>
     );
 };
