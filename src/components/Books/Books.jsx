@@ -22,7 +22,7 @@ useEffect( () =>{
     return (
        <div>
          <div className="text-center mt-20">
-            <h1 className="text-4xl font-bold">Books: {cards.length}</h1>
+            <h1 className="text-4xl font-bold">Books</h1>
         </div>
        
 

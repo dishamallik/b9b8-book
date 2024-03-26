@@ -8,7 +8,7 @@ const Job = ({job}) => {
         <Link
          to={`/job/${bookId}`} className="card w-96 bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
-    <img src={image} alt="" className="rounded-xl" />
+    <img src={image} alt="" className="rounded-xl max-w-64" />
   </figure>
   <div className="card-body items-start text-center">
     <div className="flex gap-5 ">
