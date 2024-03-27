@@ -3,7 +3,7 @@
 
 
 function Ebook() {
-  // Dummy data for the eBook
+  
   const ebookData = {
     title: 'The Hobbit',
     author: 'John Dosn',

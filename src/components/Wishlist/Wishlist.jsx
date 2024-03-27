@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredJobApplication1 } from "../../utility1/localstorage1";
 
 const Wishlist = () => {
@@ -58,7 +58,7 @@ const Wishlist = () => {
     <div className="flex gap-10">
         <div><button className="border-2  w-auto h-10 rounded-lg bg-blue-100 text-blue-500">category:{job.category}</button></div>
         <div><button className="border-2  w-auto h-10 rounded-lg bg-red-100 text-red-500">rating:{job.rating}</button></div>
-        <div><button className="bg-green-500 btn">View Details</button></div>
+        <Link to={`/job/${job.bookId}`}><button className="bg-green-500 btn">View Details</button></Link>
     </div>
     
   </div>
