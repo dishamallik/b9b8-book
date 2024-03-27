@@ -6,7 +6,7 @@ function Ebook() {
   // Dummy data for the eBook
   const ebookData = {
     title: 'The Hobbit',
-    author: 'John Doe',
+    author: 'John Doshon',
     description: "An enchanting adventure set in Middle-earth, where Bilbo Baggins embarks on a journey to reclaim treasure guarded by the dragon Smaug. Tolkien's world-building is unparalleled.",
     coverUrl: 'https://i.ibb.co/2gNQNPc/img6.jpg',
     downloadUrl: 'https://example.com/sample-ebook.pdf',
