@@ -12,7 +12,11 @@
 
 ## Get Started
 
+<<<<<<< HEAD
 To start exploring the world of books with Book Vibe, simply visit [Book Vibe](https://www.bookvibe.com) and create an account to unlock personalized recommendations, join discussions, and discover your next great read.
+=======
+To start exploring the world of books with Book Vibe, simply visit  and create an account to unlock personalized recommendations, join discussions, and discover your next great read.
+>>>>>>> 3d9f2bdd0c9dcfa00ab2f0ae00cb5dd942233a62
 
 ## Feedback and Support
 
@@ -20,7 +24,10 @@ We value your feedback! If you have any questions, suggestions, or issues, pleas
 
 Happy reading!
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3d9f2bdd0c9dcfa00ab2f0ae00cb5dd942233a62
 
 
 Currently, two official plugins are available:
