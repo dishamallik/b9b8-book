@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { getStoredJobApplication } from "../../utility/localstorage";
 
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { getStoredJobApplication } from '../../utility/localstorage';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -22,54 +22,56 @@ const TriangleBar = (props) => {
 };
 
 export default function App() {
-    
+    const [appliedJobs, setAppliedJobs] = useState([]);
+    const Book =useLoaderData();
 
-const [appliedJobs, setAppliedJobs] = useState([]);
-const Book =useLoaderData();
-
-useEffect( () =>{
-    const storedJobIds = getStoredJobApplication();
-    if(Book.length > 0){
-         const jobsApplied = Book.filter(job => storedJobIds.includes(job.bookId))
-
+    useEffect( () =>{
+        const storedJobIds = getStoredJobApplication();
+        if(Book.length > 0){
             
-        
-        setAppliedJobs(jobsApplied);
-        // console.log(Book,storedJobIds, jobsApplied);
+            const jobsApplied = [];
+            for (const bookId of storedJobIds){
+                const job = Book.find(job => job.bookId === bookId);
+                if(job){
+                    jobsApplied.push(job)
+                }
+            }
+            setAppliedJobs(jobsApplied);
+            // setDisplayJobs(jobsApplied);
+            
+            // console.log(Book,storedJobIds, jobsApplied);
 
-    }
-}, [Book])
+        }
+    }, [Book])
+
 
   return (
-
-
-<ul>
-                {
-                    appliedJobs.map(job => <li key={job.bookId}>
-
-<BarChart
-      width={500}
-      height={300}
+    
+    
+        <ResponsiveContainer height={400}>
+        <BarChart
+      width={1300}
+      height={400}
       data={appliedJobs}
+      margin={{
+        top: 20,
+        right: 30,
+        left: 20,
+        bottom: 20,
+      }}
       
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey={job.bookName}/>
-      <YAxis dataKey={job.totalPages} />
-      <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+      <XAxis   dataKey="bookName" />
+      <YAxis  />
+      <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
         {appliedJobs.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
         ))}
       </Bar>
     </BarChart>
-
-
-                   
-</li>)
-                }
-            </ul>
-            
-
+    </ResponsiveContainer>
     
+   
   );
 }

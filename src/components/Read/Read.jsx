@@ -7,6 +7,25 @@ const Read = () => {
     const Book =useLoaderData();
 
 const [appliedJobs, setAppliedJobs] = useState([]);
+// sort
+const [displayJobs, setDisplayJobs] = useState([]);
+  
+
+const handleJobsFilter = filter =>{
+    if(filter === 'all'){
+        setDisplayJobs(appliedJobs);
+    }
+    else if (filter === 'Rating'){
+        const ratingBooks = appliedJobs.filter(job => job.rating === '4.7')
+        setDisplayJobs(ratingBooks);
+    }
+    else if (filter === 'Number'){
+        const NumberBooks = appliedJobs.filter(job => job.totalPages === '324')
+        setDisplayJobs(NumberBooks);
+    }
+
+}
+// sort
 
     useEffect( () =>{
         const storedJobIds = getStoredJobApplication();
@@ -20,19 +39,30 @@ const [appliedJobs, setAppliedJobs] = useState([]);
                 }
             }
             setAppliedJobs(jobsApplied);
+            setDisplayJobs(jobsApplied);
+            
             // console.log(Book,storedJobIds, jobsApplied);
 
         }
-    }, [])
+    }, [Book])
 
     return (
+        // sort
         <div>
-            
+            <details className="dropdown">
+  <summary className="m-1 btn">open or close</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <li onClick={() => handleJobsFilter('all')}><a>Sort Buy</a></li>
+    <li onClick={() => handleJobsFilter('Rating')}><a>Rating</a></li>
+    <li onClick={() => handleJobsFilter('Number')}><a>Number of pages</a></li>
+    <li><a>Published year</a></li>
+  </ul>
+</details>
 
-
+{/* sort */}
             <ul>
                 {
-                    appliedJobs.map(job => <li key={job.bookId}>
+                    displayJobs.map(job => <li key={job.bookId}>
                 
                 
                 <div className="  container mx-auto mt-10 card card-side bg-base-100 shadow-xl">
