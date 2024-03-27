@@ -19,6 +19,7 @@ import BookDetails from './components/BookDetails/BookDetails';
 import Read from './components/Read/Read';
 import Wishlist from './components/Wishlist/Wishlist';
 import Error from './Error';
+import Buy from './components/Buy/Buy';
 
 
 
@@ -63,7 +64,11 @@ const router = createBrowserRouter([
         
         
       },
-      
+      {
+        path: '/buy',
+        element: <Buy></Buy>,
+      },
+
       {
         path: '/job/:bookId',
         element: <BookDetails></BookDetails>,
