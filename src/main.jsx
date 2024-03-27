@@ -6,6 +6,7 @@ import './index.css'
 
 import {
   createBrowserRouter,
+  Route,
   RouterProvider,
 } from "react-router-dom";
 import Root from './components/Root/Root';
@@ -17,6 +18,7 @@ import Ebook from './components/Ebook/Ebook';
 import BookDetails from './components/BookDetails/BookDetails';
 import Read from './components/Read/Read';
 import Wishlist from './components/Wishlist/Wishlist';
+import Error from './Error';
 
 
 
@@ -61,16 +63,22 @@ const router = createBrowserRouter([
         
         
       },
+      
       {
         path: '/job/:bookId',
         element: <BookDetails></BookDetails>,
         loader: () => fetch('/Book.json'),
       },
-      
+      {
+        path: '*', element: <Error />
+      }
 
     ]
+
   },
+  
 ]);
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
