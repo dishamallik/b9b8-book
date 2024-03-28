@@ -49,15 +49,17 @@ const handleJobsFilter = filter =>{
     return (
         // sort
         <div>
-            <details className="dropdown">
-  <summary className="m-1 btn">open or close</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li onClick={() => handleJobsFilter('all')}><a>Sort Buy</a></li>
+            <div className="mt-5  text-center" >
+            <details className="dropdown ">
+  <summary className="m-1 btn bg-green-500 text-white">Sort By</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-green-100 rounded-box w-52">
+    <li onClick={() => handleJobsFilter('all')}><a>Sort By</a></li>
     <li onClick={() => handleJobsFilter('Rating')}><a>Rating</a></li>
     <li onClick={() => handleJobsFilter('Number')}><a>Number of pages</a></li>
     <li><a>Published year</a></li>
   </ul>
 </details>
+</div>
 
 {/* sort */}
             <ul>
@@ -65,7 +67,7 @@ const handleJobsFilter = filter =>{
                     displayJobs.map(job => <li key={job.bookId}>
                 
                 
-                <div className="container mx-auto mt-10 card card-side bg-base-100 shadow-xl">
+                <div className="container mx-auto mt-40 card card-side bg-base-100 shadow-xl">
   <div className="lg:flex">
   <div>
   <img className="w-64 " src={job.image} alt="Movie"/>
