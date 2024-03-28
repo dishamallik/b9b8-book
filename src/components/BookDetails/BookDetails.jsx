@@ -1,8 +1,14 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
+
+//toast 
 import  { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// toast
+
+
+
 import { saveJobApplication } from "../../utility/localstorage";
 import { saveJobApplication1 } from "../../utility1/localstorage1";
 
@@ -14,35 +20,65 @@ const BookDetails = () => {
     const job = jobs.find(job => job.bookId === bookIdInt);
     console.log(job);
 
-// toast for read
+    // saveJobApplication(bookIdInt);
+    // saveJobApplication1(bookIdInt);
 
 
 
 
-const [firstButtonClickCount, setFirstButtonClickCount] = useState(0);
-  const [secondButtonClickCount, setSecondButtonClickCount] = useState(0);
+
+
+      
+// toast
+const [readBooks, setReadBooks] = useState([]);
+  const [wishlistBooks, setWishlistBooks] = useState([]);
+
+//   const handleReadClick = (book) => {
+//     saveJobApplication(bookIdInt);
+//     if (readBooks.includes(book)) {
+//       toast.error('This book is already added to your Read list');
+//     } else {
+//       setReadBooks([...readBooks, book]);
+//       toast.success(`Added  to your Read list`);
+//     }
     
-  const handleFirstButtonClick = () => {
+//     setWishlistBooks(wishlistBooks.filter(item => item !== book));
+//   };
+
+//   const handleWishlistClick = (book) => {
+//     saveJobApplication1(bookIdInt);
+//     if (wishlistBooks.includes(book)) {
+//       toast.error('This book is already added to your Wishlist');
+//     } else if (readBooks.includes(book)) {
+//       toast.error('You have already read this book. Cannot add to Wishlist.');
+//     } else {
+//       setWishlistBooks([...wishlistBooks, book]);
+//       toast.success(`Added  to your Wishlist`);
+//     }
+//   };
+// toast
+
+const handleReadClick = (book) => {
     saveJobApplication(bookIdInt);
-    if (firstButtonClickCount === 0) {
-      toast.success('Success toast', { autoClose: 2000 });
-     
-    } 
-    else {
-      toast.error('Error toast', { autoClose: 2000 });
+    if (!readBooks.includes(book)) {
+      setReadBooks([...readBooks, book]);
+      toast.success(`Added "${book}" to Read list`);
+    } else {
+      toast.error(`"${book}" already added to Read list`);
     }
-    setFirstButtonClickCount(firstButtonClickCount + 1);
   };
 
-  const handleSecondButtonClick = () => {
+  const handleWishlistClick = (book) => {
     saveJobApplication1(bookIdInt);
-
-    toast.error('Error toast', { autoClose: 2000 });
-    setSecondButtonClickCount(secondButtonClickCount + 1);
-  };   
-      
-
-
+    if (readBooks.includes(book)) {
+      toast.error(`"${book}" already added to Read list. Cannot add to Wishlist`);
+    } else if (!wishlistBooks.includes(book)) {
+      setWishlistBooks([...wishlistBooks, book]);
+      toast.success(`Added "${book}" to Wishlist`);
+    } else {
+      toast.error(`"${book}" already added to Wishlist`);
+    }
+  };
 
 
     return (
@@ -86,8 +122,8 @@ const [firstButtonClickCount, setFirstButtonClickCount] = useState(0);
             
         </div>
         <div className="flex gap-10">
-            <button onClick={handleFirstButtonClick}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Read</button>
-            <button onClick={handleSecondButtonClick} className="bg-green-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400">Wishlist</button>
+            <button onClick={() => handleReadClick("Book Title")}  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Read</button>
+            <button onClick={() => handleWishlistClick("Book Title")} className="bg-green-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400">Wishlist</button>
         </div>
     </div>
 </div>
