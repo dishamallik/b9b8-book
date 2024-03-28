@@ -8,7 +8,7 @@ const Banner = () => {
   <div className="hero-content  lg:gap-32 flex-col lg:flex-row-reverse">
     <img src="https://i.ibb.co/nBPmbQp/img2.jpg" className="lg:max-w-sm  shadow-2xl" />
     <div className="">
-      <h1 className=" mb-10 text-xl  md:text-5xl font-bold">Books to freshen
+      <h1 className=" mb-10 text-2xl  md:text-5xl font-bold">Books to freshen
       <br/> up your bookshelf</h1>
      
       <Link to="/listed">
