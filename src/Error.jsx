@@ -10,7 +10,7 @@ const Error = () => {
                 <br />
                 Error Page !
             </h1>
-            <Link to="/home" className="bg-blue-500 text-white py-2 px-4 rounded-md inline-block hover:bg-blue-600 transition duration-300 mt-10">Back to Home</Link>
+            <Link to="/" className="bg-blue-500 text-white py-2 px-4 rounded-md inline-block hover:bg-blue-600 transition duration-300 mt-10">Back to Home</Link>
         </div>
     );
 };
