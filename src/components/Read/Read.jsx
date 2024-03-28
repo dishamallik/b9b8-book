@@ -87,12 +87,12 @@ const handleJobsFilter = filter =>{
 
     <div className="w-full border-t border-gray-300 border-line my-4"></div> 
 
-    <div className=" flex gap-10 ">
-        <div><button className="border-2  w-auto h-10 rounded-lg bg-blue-100 text-blue-500">category:{job.category}</button></div>
-        <div><button className="border-2  w-auto h-10 rounded-lg bg-red-100 text-red-500">rating:{job.rating}</button></div>
-        
+    <div className=" lg:flex gap-10 ">
+        <div><button className="border-2  w-auto h-10 rounded-lg bg-blue-100 text-blue-500 mt-2">category:{job.category}</button></div>
+        <div><button className="border-2  w-auto h-10 rounded-lg bg-red-100 text-red-500 mt-2">rating:{job.rating}</button></div>
+        <Link to={`/job/${job.bookId}`}><button className="bg-green-500 btn border-2  w-auto h-10 rounded-lg mt-2">View Details</button></Link>
     </div>
-    <Link to={`/job/${job.bookId}`}><button className="bg-green-500 border-2  w-auto h-10 rounded-lg btn">View Details</button></Link>
+    
     
   </div>
   </div>

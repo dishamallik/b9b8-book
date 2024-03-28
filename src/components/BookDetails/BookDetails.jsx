@@ -62,21 +62,21 @@ const handleReadClick = (book) => {
     saveJobApplication(bookIdInt);
     if (!readBooks.includes(book)) {
       setReadBooks([...readBooks, book]);
-      toast.success(`Added "${book}" to Read list`);
+      toast.success(`Added  to Read list`);
     } else {
-      toast.error(`"${book}" already added to Read list`);
+      toast.error(` already added to Read list`);
     }
   };
 
   const handleWishlistClick = (book) => {
     saveJobApplication1(bookIdInt);
     if (readBooks.includes(book)) {
-      toast.error(`"${book}" already added to Read list. Cannot add to Wishlist`);
+      toast.error(` already added to Read list. Cannot add to Wishlist`);
     } else if (!wishlistBooks.includes(book)) {
       setWishlistBooks([...wishlistBooks, book]);
-      toast.success(`Added "${book}" to Wishlist`);
+      toast.success(`Added  to Wishlist`);
     } else {
-      toast.error(`"${book}" already added to Wishlist`);
+      toast.error(` already added to Wishlist`);
     }
   };
 
